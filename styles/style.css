@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: "Noto Sans KR", sans-serif;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 h1 {
   margin: 0; }
@@ -60,6 +60,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   background-color: yellow; }
   header .header-inner {
     display: flex;
@@ -68,7 +69,7 @@ header {
     height: 3rem;
     padding: 10px 20px;
     background-color: orange;
-    z-index: 1; }
+    z-index: 30; }
     @media screen and (min-width: 1025px) {
       header .header-inner {
         position: relative;
@@ -85,10 +86,14 @@ header {
       right: 0;
       width: 50%;
       height: 100vh;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(10%);
       transition: 0.5s;
       background-color: pink;
-      z-index: 10; }
+      z-index: 50; }
       header .header-inner nav.active {
+        visibility: visible;
         opacity: 1;
         transform: translateX(0); }
       @media screen and (min-width: 1025px) {
@@ -144,13 +149,22 @@ header {
       header .header-inner nav .close-btn {
         position: absolute;
         top: 1rem;
-        right: 20px; }
+        right: 16px;
+        padding: 4px;
+        cursor: pointer;
+        transition: 0.5s; }
+        header .header-inner nav .close-btn:hover {
+          opacity: 0.5; }
     header .header-inner .nav-btn {
       position: absolute;
       top: 50%;
       right: 20px;
       transform: translateY(-50%);
-      font-size: 1.1rem; }
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.5s; }
+      header .header-inner .nav-btn:hover {
+        opacity: 0.5; }
     header .header-inner .header-lg-right {
       position: absolute;
       right: 20px;
