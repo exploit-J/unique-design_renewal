@@ -1,5 +1,7 @@
 header {
   position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +11,7 @@ header {
   .header-inner {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: 3rem;
     padding: 10px 20px;
     background-color: orange;
