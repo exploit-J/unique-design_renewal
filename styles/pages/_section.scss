@@ -214,4 +214,31 @@ main {
       }
     }
   }
+  .process-section {
+    padding: 0 20px;
+    .process-wrap {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      .process-img {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .partners-section {
+    padding: 0 20px;
+    .partners-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .partners-img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

@@ -370,4 +370,24 @@ main .overview-section {
       main .overview-section .overview-wrap .overview-contents dl dd {
         margin-bottom: 16px; }
 
+main .process-section {
+  padding: 0 20px; }
+  main .process-section .process-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+    main .process-section .process-wrap .process-img {
+      width: 100%; }
+      main .process-section .process-wrap .process-img img {
+        width: 100%; }
+
+main .partners-section {
+  padding: 0 20px; }
+  main .partners-section .partners-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    main .partners-section .partners-wrap .partners-img img {
+      width: 100%; }
+
 /*# sourceMappingURL=style.css.map */
