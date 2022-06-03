@@ -1,10 +1,11 @@
 header {
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   background-color: yellow;
+  z-index: $header-lv;
   .header-inner {
     display: flex;
     align-items: center;
@@ -12,7 +13,6 @@ header {
     height: 3rem;
     padding: 10px 20px;
     background-color: orange;
-    z-index: $header-lv;
     @include responsive {
       position: relative;
       max-width: 1920px;
