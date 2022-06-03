@@ -390,4 +390,37 @@ main .partners-section {
     main .partners-section .partners-wrap .partners-img img {
       width: 100%; }
 
+main .contact-section {
+  padding: 0 20px; }
+  @media screen and (min-width: 1025px) {
+    main .contact-section ul {
+      display: flex;
+      justify-content: center; } }
+  main .contact-section ul li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px; }
+    @media screen and (min-width: 1025px) {
+      main .contact-section ul li {
+        align-items: center;
+        justify-content: space-between;
+        padding: 4px 16px;
+        margin: 0 16px; } }
+    main .contact-section ul li:last-child img {
+      width: 50px; }
+    main .contact-section ul li .img {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 32px;
+      height: 32px; }
+      @media screen and (min-width: 1025px) {
+        main .contact-section ul li .img {
+          width: 52px;
+          height: 52px;
+          margin-bottom: 8px; } }
+      main .contact-section ul li .img img {
+        width: 90%;
+        height: 90%; }
+
 /*# sourceMappingURL=style.css.map */

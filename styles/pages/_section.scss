@@ -241,4 +241,43 @@ main {
       }
     }
   }
+  .contact-section {
+    padding: 0 20px;
+    ul {
+      @include responsive {
+        display: flex;
+        justify-content: center;
+      }
+      li {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+        @include responsive {
+          align-items: center;
+          justify-content: space-between;
+          padding: 4px 16px;
+          margin: 0 16px;
+        }
+        &:last-child img {
+          width: 50px;
+        }
+        .img {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          width: 32px;
+          height: 32px;
+          @include responsive {
+            width: 52px;
+            height: 52px;
+            margin-bottom: 8px;
+          }
+          img {
+            width: 90%;
+            height: 90%;
+          }
+        }
+      }
+    }
+  }
 }
