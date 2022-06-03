@@ -1,17 +1,22 @@
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url(../assets/font/MyriadPro-Regular.otf);
+}
+
 * {
   margin: 0;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "MyriadPro-Regular", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
 }
 
 html {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "MyriadPro-Regular", sans-serif;
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "MyriadPro-Regular", sans-serif;
   overflow-x: hidden;
 }
 

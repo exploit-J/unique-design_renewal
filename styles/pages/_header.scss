@@ -7,12 +7,12 @@ header {
   left: 0;
   width: 100%;
   background-color: #fff;
-  transform: translateY(-3rem);
+  transform: translateY(0);
   transition: 0.5s;
   z-index: $header-lv;
 
   &.active {
-    transform: translateY(0);
+    transform: translateY(-3rem);
   }
   .header-inner {
     display: flex;
@@ -32,8 +32,12 @@ header {
       &:hover {
         opacity: 0.5;
       }
-      img {
-        width: 7rem;
+      a {
+        display: flex;
+        align-items: center;
+        img {
+          width: 7rem;
+        }
       }
     }
     nav {
@@ -53,6 +57,7 @@ header {
         position: static;
         width: fit-content;
         height: auto;
+        background-color: #fff;
         opacity: 1;
         transform: translateX(0);
         visibility: visible;

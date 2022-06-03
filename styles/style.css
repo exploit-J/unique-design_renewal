@@ -1,15 +1,19 @@
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url(../assets/font/MyriadPro-Regular.otf); }
+
 * {
   margin: 0;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "MyriadPro-Regular", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box; }
 
 html {
-  font-family: "Noto Sans KR", sans-serif; }
+  font-family: "MyriadPro-Regular", sans-serif; }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "MyriadPro-Regular", sans-serif;
   overflow-x: hidden; }
 
 h1 {
@@ -64,11 +68,11 @@ header {
   left: 0;
   width: 100%;
   background-color: #fff;
-  transform: translateY(-3rem);
+  transform: translateY(0);
   transition: 0.5s;
   z-index: 30; }
   header.active {
-    transform: translateY(0); }
+    transform: translateY(-3rem); }
   header .header-inner {
     display: flex;
     align-items: center;
@@ -86,8 +90,11 @@ header {
       transition: 0.5s; }
       header .header-inner .logo:hover {
         opacity: 0.5; }
-      header .header-inner .logo img {
-        width: 7rem; }
+      header .header-inner .logo a {
+        display: flex;
+        align-items: center; }
+        header .header-inner .logo a img {
+          width: 7rem; }
     header .header-inner nav {
       position: absolute;
       top: 0%;
@@ -105,6 +112,7 @@ header {
           position: static;
           width: fit-content;
           height: auto;
+          background-color: #fff;
           opacity: 1;
           transform: translateX(0);
           visibility: visible; } }
@@ -206,6 +214,9 @@ header {
 main section {
   padding: 0 20px;
   padding-bottom: 50px; }
+  @media screen and (min-width: 1025px) {
+    main section {
+      min-height: 60vh; } }
   main section.active h2 {
     opacity: 1;
     transform: translateY(0); }
@@ -366,45 +377,59 @@ main .about-section {
             main .about-section .about-wrap .about-contents .about-desc .about-desc-wrap .bottom-img {
               margin-bottom: 0; } }
 
-main .overview-section .overview-wrap {
-  background-color: #f7f8fa; }
-  @media screen and (min-width: 1025px) {
-    main .overview-section .overview-wrap {
-      display: flex;
-      justify-content: center; } }
-  main .overview-section .overview-wrap .overview-contents {
-    display: flex;
-    flex-direction: column; }
+main .overview-section {
+  position: relative; }
+  main .overview-section .overview-wrap {
+    background-color: #f7f8fa; }
     @media screen and (min-width: 1025px) {
-      main .overview-section .overview-wrap .overview-contents {
-        flex-direction: row; } }
-    main .overview-section .overview-wrap .overview-contents .overview-img {
+      main .overview-section .overview-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 50vh;
+        transform: translate(-50%, -50%); } }
+    main .overview-section .overview-wrap .overview-contents {
       display: flex;
-      justify-content: center;
-      margin-bottom: 20px; }
+      flex-direction: column; }
       @media screen and (min-width: 1025px) {
-        main .overview-section .overview-wrap .overview-contents .overview-img {
-          max-width: 600px;
-          margin: 0 40px; } }
-      main .overview-section .overview-wrap .overview-contents .overview-img img {
+        main .overview-section .overview-wrap .overview-contents {
+          justify-content: center;
+          flex-direction: row;
+          width: 100%;
+          height: fit-content; } }
+      main .overview-section .overview-wrap .overview-contents .overview-img {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; }
+        @media screen and (min-width: 1025px) {
+          main .overview-section .overview-wrap .overview-contents .overview-img {
+            margin: 0 40px; } }
+        main .overview-section .overview-wrap .overview-contents .overview-img img {
+          width: 100%;
+          max-width: 600px; }
+      main .overview-section .overview-wrap .overview-contents dl {
         width: 100%; }
-    main .overview-section .overview-wrap .overview-contents dl {
-      width: 100%; }
-      @media screen and (min-width: 1025px) {
-        main .overview-section .overview-wrap .overview-contents dl {
-          max-width: 600px;
-          margin: 0 40px; } }
-      main .overview-section .overview-wrap .overview-contents dl dt {
-        margin-bottom: 4px;
-        color: #004da0;
-        font-weight: 700; }
-      main .overview-section .overview-wrap .overview-contents dl dd {
-        margin-bottom: 16px; }
-      main .overview-section .overview-wrap .overview-contents dl .point {
-        font-weight: 700; }
-      main .overview-section .overview-wrap .overview-contents dl .ver-bar {
-        padding: 0 4px;
-        font-size: 0.8rem; }
+        @media screen and (min-width: 1025px) {
+          main .overview-section .overview-wrap .overview-contents dl {
+            max-width: 600px;
+            margin: 0 40px; } }
+        main .overview-section .overview-wrap .overview-contents dl dt {
+          margin-bottom: 4px;
+          color: #004da0;
+          font-weight: 700;
+          font-size: 1.2rem; }
+        main .overview-section .overview-wrap .overview-contents dl dd {
+          margin-bottom: 16px;
+          font-size: 1.1rem; }
+        main .overview-section .overview-wrap .overview-contents dl .point {
+          font-weight: 700; }
+        main .overview-section .overview-wrap .overview-contents dl .ver-bar {
+          padding: 0 4px;
+          font-size: 0.8rem; }
 
 main .process-section .process-wrap {
   width: 100%; }
@@ -412,6 +437,10 @@ main .process-section .process-wrap {
     display: flex;
     justify-content: center;
     width: 100%; }
+    @media screen and (min-width: 1025px) {
+      main .process-section .process-wrap .process-img {
+        align-items: center;
+        height: 50vh; } }
     main .process-section .process-wrap .process-img img {
       width: 50%; }
       @media screen and (min-width: 1025px) {
@@ -428,22 +457,29 @@ main .partners-section .partners-wrap {
 main .contact-section {
   position: relative; }
   @media screen and (min-width: 1025px) {
-    main .contact-section ul {
+    main .contact-section .contact-wrap {
       display: flex;
-      justify-content: center; } }
-  main .contact-section ul li {
+      flex-direction: column;
+      justify-content: center;
+      height: 50vh; } }
+  @media screen and (min-width: 1025px) {
+    main .contact-section .contact-wrap ul {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px; } }
+  main .contact-section .contact-wrap ul li {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px; }
     @media screen and (min-width: 1025px) {
-      main .contact-section ul li {
+      main .contact-section .contact-wrap ul li {
         align-items: center;
         justify-content: space-between;
         margin: 0 16px;
         padding: 4px 16px; } }
-    main .contact-section ul li:last-child img {
+    main .contact-section .contact-wrap ul li:last-child img {
       width: 50px; }
-    main .contact-section ul li .img {
+    main .contact-section .contact-wrap ul li .img {
       display: flex;
       justify-content: center;
       align-content: center;
@@ -451,11 +487,11 @@ main .contact-section {
       height: 32px;
       margin-bottom: 4px; }
       @media screen and (min-width: 1025px) {
-        main .contact-section ul li .img {
+        main .contact-section .contact-wrap ul li .img {
           width: 52px;
           height: 52px;
           margin-bottom: 8px; } }
-      main .contact-section ul li .img img {
+      main .contact-section .contact-wrap ul li .img img {
         width: 90%;
         height: 90%; }
   main .contact-section .go-top {
@@ -465,6 +501,16 @@ main .contact-section {
     padding-right: 20px;
     font-size: 2rem;
     cursor: pointer; }
+    main .contact-section .go-top:hover {
+      animation: go-top 2s infinite; }
+
+@keyframes go-top {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-10px); }
+  100% {
+    transform: translateY(0); } }
 
 footer {
   position: relative;

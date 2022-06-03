@@ -2,6 +2,9 @@ main {
   section {
     padding: 0 20px;
     padding-bottom: 50px;
+    @include responsive {
+      min-height: 60vh;
+    }
     &.active h2 {
       opacity: 1;
       transform: translateY(0);
@@ -202,28 +205,39 @@ main {
     }
   }
   .overview-section {
+    position: relative;
     .overview-wrap {
       background-color: $background;
       @include responsive {
         display: flex;
         justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 50vh;
+        transform: translate(-50%, -50%);
       }
       .overview-contents {
         display: flex;
         flex-direction: column;
         @include responsive {
+          justify-content: center;
           flex-direction: row;
+          width: 100%;
+          height: fit-content;
         }
         .overview-img {
           display: flex;
           justify-content: center;
           margin-bottom: 20px;
           @include responsive {
-            max-width: 600px;
             margin: 0 40px;
           }
           img {
             width: 100%;
+            max-width: 600px;
           }
         }
         dl {
@@ -236,9 +250,11 @@ main {
             margin-bottom: 4px;
             color: $primary;
             font-weight: 700;
+            font-size: 1.2rem;
           }
           dd {
             margin-bottom: 16px;
+            font-size: 1.1rem;
           }
           .point {
             font-weight: 700;
@@ -260,6 +276,10 @@ main {
         display: flex;
         justify-content: center;
         width: 100%;
+        @include responsive {
+          align-items: center;
+          height: 50vh;
+        }
         img {
           width: 50%;
           @include responsive {
@@ -283,39 +303,48 @@ main {
   }
   .contact-section {
     position: relative;
-    ul {
+    .contact-wrap {
       @include responsive {
         display: flex;
-        justify-content: center;
-      }
-      li {
-        display: flex;
         flex-direction: column;
-        margin-bottom: 16px;
+        justify-content: center;
+        height: 50vh;
+      }
+      ul {
         @include responsive {
-          align-items: center;
-          justify-content: space-between;
-          margin: 0 16px;
-          padding: 4px 16px;
-        }
-        &:last-child img {
-          width: 50px;
-        }
-        .img {
           display: flex;
           justify-content: center;
-          align-content: center;
-          width: 32px;
-          height: 32px;
-          margin-bottom: 4px;
+          margin-bottom: 20px;
+        }
+        li {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 16px;
           @include responsive {
-            width: 52px;
-            height: 52px;
-            margin-bottom: 8px;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 16px;
+            padding: 4px 16px;
           }
-          img {
-            width: 90%;
-            height: 90%;
+          &:last-child img {
+            width: 50px;
+          }
+          .img {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            width: 32px;
+            height: 32px;
+            margin-bottom: 4px;
+            @include responsive {
+              width: 52px;
+              height: 52px;
+              margin-bottom: 8px;
+            }
+            img {
+              width: 90%;
+              height: 90%;
+            }
           }
         }
       }
@@ -327,6 +356,20 @@ main {
       padding-right: 20px;
       font-size: 2rem;
       cursor: pointer;
+      &:hover {
+        animation: go-top 2s infinite;
+      }
     }
+  }
+}
+@keyframes go-top {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
