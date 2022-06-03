@@ -1,5 +1,7 @@
 footer {
+  position: relative;
   padding: 80px 20px 100px;
+  background-color: $background;
   .footer-inner {
     .footer-wrap {
       @include responsive {
@@ -11,6 +13,7 @@ footer {
           margin: 0 30px;
         }
         dl {
+          margin-bottom: 16px;
           @include responsive {
             font-size: 0.8rem;
           }
@@ -31,20 +34,23 @@ footer {
         }
       }
       .footer-img {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 16px;
         @include responsive {
-          display: flex;
           align-items: center;
           width: 30%;
           margin: 0 30px;
         }
         img {
-          max-width: 600px;
+          max-width: 500px;
         }
       }
     }
     .sns {
       display: flex;
       justify-content: center;
+      margin-bottom: 16px;
       ul {
         display: flex;
         justify-content: center;
@@ -67,9 +73,7 @@ footer {
     .copyright {
       display: block;
       text-align: center;
-      @include responsive {
-        font-size: 0.7rem;
-      }
+      font-size: 0.7rem;
     }
   }
 }
