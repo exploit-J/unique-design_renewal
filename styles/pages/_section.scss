@@ -175,21 +175,41 @@ main {
   .overview-section {
     padding: 0 20px;
     .overview-wrap {
-      .overview-img {
+      @include responsive {
         display: flex;
         justify-content: center;
-        margin-bottom: 20px;
-        img {
-          width: 100%;
-        }
       }
-      dl {
-        dd {
-          margin-bottom: 4px;
-          font-weight: 700;
+      .overview-contents {
+        display: flex;
+        flex-direction: column;
+        @include responsive {
+          flex-direction: row;
         }
-        dt {
-          margin-bottom: 16px;
+        .overview-img {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+          @include responsive {
+            max-width: 600px;
+            margin: 0 40px;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        dl {
+          @include responsive {
+            max-width: 600px;
+            margin: 0 40px;
+          }
+          width: 100%;
+          dt {
+            margin-bottom: 4px;
+            font-weight: 700;
+          }
+          dd {
+            margin-bottom: 16px;
+          }
         }
       }
     }

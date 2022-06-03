@@ -338,16 +338,36 @@ main .about-section {
 
 main .overview-section {
   padding: 0 20px; }
-  main .overview-section .overview-wrap .overview-img {
+  @media screen and (min-width: 1025px) {
+    main .overview-section .overview-wrap {
+      display: flex;
+      justify-content: center; } }
+  main .overview-section .overview-wrap .overview-contents {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px; }
-    main .overview-section .overview-wrap .overview-img img {
+    flex-direction: column; }
+    @media screen and (min-width: 1025px) {
+      main .overview-section .overview-wrap .overview-contents {
+        flex-direction: row; } }
+    main .overview-section .overview-wrap .overview-contents .overview-img {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px; }
+      @media screen and (min-width: 1025px) {
+        main .overview-section .overview-wrap .overview-contents .overview-img {
+          max-width: 600px;
+          margin: 0 40px; } }
+      main .overview-section .overview-wrap .overview-contents .overview-img img {
+        width: 100%; }
+    main .overview-section .overview-wrap .overview-contents dl {
       width: 100%; }
-  main .overview-section .overview-wrap dl dd {
-    margin-bottom: 4px;
-    font-weight: 700; }
-  main .overview-section .overview-wrap dl dt {
-    margin-bottom: 16px; }
+      @media screen and (min-width: 1025px) {
+        main .overview-section .overview-wrap .overview-contents dl {
+          max-width: 600px;
+          margin: 0 40px; } }
+      main .overview-section .overview-wrap .overview-contents dl dt {
+        margin-bottom: 4px;
+        font-weight: 700; }
+      main .overview-section .overview-wrap .overview-contents dl dd {
+        margin-bottom: 16px; }
 
 /*# sourceMappingURL=style.css.map */
